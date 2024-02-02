@@ -134,7 +134,7 @@ public class Mypage {
 	public void getcon() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://3.34.46.245:3306/project?characterEncoding=utf-8", "ysumin", "123456");
+			connection = DriverManager.getConnection("jdbc:mysql://15.165.203.24:3306/project?characterEncoding=utf-8", "ysumin", "123456");
 			if(connection == null) {
 //				throw?占쏙옙 ?占쏙옙?占쏙옙泥섎━占�? 媛뺤젣占�? ?占쏙옙?占쏙옙?占쏙옙嫄곌퀬
 //				throws?占쏙옙 硫붿냼?占쏙옙 ?占쏙옙?占쏙옙 ?占쏙옙?占쏙옙?占쏙옙 ?占쏙옙?占쏙옙 硫붿냼?占쏙옙占�? ?占쏙옙?占쏙옙 ?占쏙옙?占쏙옙占�? ?占쏙옙占�? ?占쏙옙 ?占쏙옙?占쏙옙占�?占�? ?占쏙옙?占쏙옙?占쏙옙?占쏙옙 ?占쏙옙 ?占쏙옙?占쏙옙?占쏙옙?占쏙옙!

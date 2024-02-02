@@ -41,13 +41,13 @@
         
         try{
         	Class.forName("com.mysql.cj.jdbc.Driver");
-    		connection = DriverManager.getConnection("jdbc:mysql://3.34.46.245:3306/project?characterEncoding=utf-8", "ysumin", "123456");
+    		connection = DriverManager.getConnection("jdbc:mysql://15.165.203.24:3306/project?characterEncoding=utf-8", "ysumin", "123456");
 
             if(connection == null){
                 throw new Exception("데이터베이스 연결 안됨<br>");
             }
             statement = connection.createStatement();
-            int i = statement.executeUpdate("insert into freeboardcomment(freeboardUserID, freeboardPostID, freeboardcomment) values ('"+ id  + "','" + number + "','" + text + "');");
+            int i = statement.executeUpdate("insert into freeboardComment(freeboardUserID, freeboardPostID, freeboardComment) values ('"+ id  + "','" + number + "','" + text + "');");
 
         } finally{
             try{

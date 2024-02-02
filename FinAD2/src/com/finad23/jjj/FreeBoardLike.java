@@ -15,7 +15,7 @@ public class FreeBoardLike {
 		Connection connection = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://3.34.46.245:3306/project?characterEncoding=utf-8", "ysumin", "123456");
+			connection = DriverManager.getConnection("jdbc:mysql://15.165.203.24:3306/project?characterEncoding=utf-8", "ysumin", "123456");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -48,7 +48,7 @@ public class FreeBoardLike {
 		
 		try {
 			statement = connection.createStatement();
-			resultSet = statement.executeQuery("select freeboardUserID, freeboardPostID from project.freeboardlike where freeboardUserId = '" + id + "' and freeboardPostId =" + clickText + ";");
+			resultSet = statement.executeQuery("select freeboardUserID, freeboardPostID from project.freeboardLike where freeboardUserId = '" + id + "' and freeboardPostId =" + clickText + ";");
 			if(resultSet.next()) {
 				FreeboardLikeDTO freeboardLikeDTO = new FreeboardLikeDTO();
 				freeboardLikeDTO.setUserID(resultSet.getString("freeboardUserID"));
